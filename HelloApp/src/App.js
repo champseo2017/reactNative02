@@ -4,15 +4,16 @@ import {View, Text, StyleSheet, Platform} from 'react-native';
 
 import commonStyles from './styles/common-styles';
 import ColumnItems from './components/column-items';
+import RowItems from './components/row-items'
 
 const App = () => {
   /* 
-    - การแสดง items ในแนวตั้ง หรือ column เหมาะสำหรับกรณีที่ความกว้างของ
-    แต่ละรายการ (items) มีขนาดเท่ากับหน้าจอ หรือ แสดงแถวล่ะ 1 รายการนั่นเอง
+    - การแสดง items ในแนวนอนหรือ row เหมาะกับ
+    items ที่มีหลายรายการ ในแถวเดียวกัน
   
   */
 
-  return <ColumnItems />;
+  return <RowItems />;
 };
 
 export default App;
