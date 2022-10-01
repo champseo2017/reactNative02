@@ -7,47 +7,19 @@ import {
   Platform
 } from 'react-native';
 
-const App = () => {
-  /* 
-    การกำหนด StyleSheet
+import commonStyles from './src/styles/common-styles'
 
-    - กำหนด Style แบบ Array
-  
-  */
+const App = () => {
 
   return (
-    <View>
+    <View style={commonStyles.container}>
       
-      <Text style={
-        [styles.textBold, 
-        styles.textBold, 
-        styles.text20]
-      }>Hello World</Text>
+      <Text style={commonStyles.textTitle}>Hello World</Text>
 
-      <Text style={
-        [styles.textBlack, styles.text16]
-      }>Hello World</Text>
+      <Text>Hello World</Text>
 
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  textBold: {
-    fontWeight: 'bold'
-  },
-  textBlue: {
-    color: 'blue'
-  },
-  textBlack: {
-    color: 'black'
-  },
-  text20: {
-    fontSize: 20
-  },
-  text16: {
-    fontSize: 16
-  }
-})
 
 export default App;
