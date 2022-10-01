@@ -1,18 +1,31 @@
-import React from 'react'
+import React from 'react';
 
-import {
-  View,
-  Text,
-  StyleSheet
-} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native';
 
 const ColumnItems = () => {
-
-  const items = ['One', "Two", "Three", "Four", "Five"]
+  const items = ['One', 'Two', 'Three', 'Four', 'Five'];
 
   return (
     <View style={styles.container}>
-      {
+      <Text
+        style={{
+          fontSize: 18,
+        }}>
+        Text Hello{' '}
+        <Text
+          style={{
+            fontWeight: 'bold',
+          }}>
+          nesting hello{' '}
+          <Text
+            style={{
+              fontSize: 'italic',
+            }}>
+            touch handling
+          </Text>
+        </Text>
+      </Text>
+      {/* {
         items.map((items, i) => {
           return (
             <View key={i} style={styles.items}>
@@ -20,21 +33,18 @@ const ColumnItems = () => {
             </View>
           )
         })
-      }
+      } */}
     </View>
-  )
-
-  
-
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column', // default 
+    flexDirection: 'column', // default
     // alignItems: 'stretch' // ขยายเต็มความกว้าง default
     marginTop: 50,
-    padding: 10
+    padding: 10,
   },
   items: {
     height: 60,
@@ -45,8 +55,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'blue',
-    fontSize: 20
-  }
-})
+    fontSize: 20,
+  },
+});
 
-export default ColumnItems
+export default ColumnItems;

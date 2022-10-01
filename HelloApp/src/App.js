@@ -12,18 +12,15 @@ import {
 
 const App = () => {
   /* 
-   - Component Alert
+
+    - Nested Text
+     - การวางคอมโฟเนนต์ Text ซ้อนกัน หรือ การจัดรูปแบบ
+     ข้อความในบางช่วง สามารถแทรก {'\n'} ขึ้นบรรทัดใหม่
+     หรือ {''} แทนช่องว่าง
+
   */
-
-   useEffect(() => {
-     
-    Alert.alert('Hello alert')
-
-
-     return () => {}
-   }, [])
    
-  return <RowItems />;
+  return <ColumnItems />;
 };
 
 export default App;
