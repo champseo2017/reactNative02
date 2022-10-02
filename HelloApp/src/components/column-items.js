@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View, 
+  Text, 
+  StyleSheet, 
+  Alert,
+  Button
+} from 'react-native';
 
 const ColumnItems = () => {
+
   const items = ['One', 'Two', 'Three', 'Four', 'Five'];
+
+  const handlerOnpressButton1 = useCallback(() => {
+    Alert.alert('Click Hello')
+  }, [])
 
   return (
     <View style={styles.container}>
-      <Text
-        numberOfLines={2}
-        ellipsizeMode='tail'
-        selectable={true}
-        style={{
-          fontSize: 18,
-          textTransform: 'capitalize'
-        }}>
-        
-        Ea voluptate in fugiat aliqua tempor dolor ad nostrud pariatur nostrud officia commodo deserunt.
-        Ea voluptate in fugiat aliqua tempor dolor ad nostrud pariatur nostrud officia commodo deserunt.
-        
-      </Text>
+
+      <View style={styles.items}>
+        <Button 
+          title="Button 1"
+          color="blue"
+          onPress={handlerOnpressButton1}
+        />
+      </View>
+      <View style={styles.items}>
+        <Button 
+          title="Button 2"
+          color="blue"
+          onPress={() => Alert.alert('Click Hello 2')}
+        />
+      </View>
       {/* {
         items.map((items, i) => {
           return (
@@ -42,16 +55,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   items: {
-    height: 60,
-    backgroundColor: 'lightgray',
-    justifyContent: 'center', // เนื้อหากึ่งกลาง (บน-ล่าง)
-    marginBottom: 15,
-    paddingLeft: 10,
-  },
-  text: {
-    color: 'blue',
-    fontSize: 20,
-  },
+    width: 150,
+    marginBottom: 15
+  }
 });
 
 export default ColumnItems;
