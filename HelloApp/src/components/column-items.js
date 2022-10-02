@@ -8,22 +8,17 @@ const ColumnItems = () => {
   return (
     <View style={styles.container}>
       <Text
+        numberOfLines={2}
+        ellipsizeMode='tail'
+        selectable={true}
         style={{
           fontSize: 18,
+          textTransform: 'capitalize'
         }}>
-        Text Hello{' '}
-        <Text
-          style={{
-            fontWeight: 'bold',
-          }}>
-          nesting hello{' '}
-          <Text
-            style={{
-              fontSize: 'italic',
-            }}>
-            touch handling
-          </Text>
-        </Text>
+        
+        Ea voluptate in fugiat aliqua tempor dolor ad nostrud pariatur nostrud officia commodo deserunt.
+        Ea voluptate in fugiat aliqua tempor dolor ad nostrud pariatur nostrud officia commodo deserunt.
+        
       </Text>
       {/* {
         items.map((items, i) => {
